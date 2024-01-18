@@ -1,0 +1,11 @@
+version: '3'
+services:
+  
+  db:
+    image: 'marqoai/marqo:1.5.1'
+    container_name: 'marqo'
+    privileged: true
+    ports:
+      - '8882:8882'
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
